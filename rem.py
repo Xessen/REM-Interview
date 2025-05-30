@@ -18,7 +18,21 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+import os
+import subprocess
 
+def ensure_model_downloaded():
+    model_path = "./accent-id-commonaccent_ecapa"
+    if not os.path.exists(model_path):
+        print("Model not found. Cloning from Hugging Face...")
+        subprocess.run([
+            "git", "clone", 
+            "https://huggingface.co/Jzuluaga/accent-id-commonaccent_ecapa", 
+            model_path
+        ], check=True)
+    else:
+        print("Model already exists.")
+ensure_model_downloaded()
 # Disable excessive logging
 logging.getLogger("speechbrain").setLevel(logging.WARNING)
 logging.getLogger("torch").setLevel(logging.WARNING)
