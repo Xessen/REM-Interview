@@ -32,7 +32,7 @@ def ensure_model_downloaded():
         ], check=True)
     else:
         print("Model already exists.")
-ensure_model_downloaded()
+#ensure_model_downloaded()
 # Disable excessive logging
 logging.getLogger("speechbrain").setLevel(logging.WARNING)
 logging.getLogger("torch").setLevel(logging.WARNING)
