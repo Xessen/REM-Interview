@@ -1,0 +1,11 @@
+streamlit
+requests
+pydub
+torchaudio
+openai-whisper
+textstat
+speechbrain
+numpy
+matplotlib
+seaborn
+pandas
