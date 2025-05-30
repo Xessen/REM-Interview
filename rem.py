@@ -36,7 +36,6 @@ ensure_model_downloaded()
 # Disable excessive logging
 logging.getLogger("speechbrain").setLevel(logging.WARNING)
 logging.getLogger("torch").setLevel(logging.WARNING)
-
 # Configuration
 MAX_DURATION = 300  # 5 minutes max for analysis
 
@@ -51,8 +50,7 @@ def load_models():
         
         # Load accent classifier
         classifier = EncoderClassifier.from_hparams(
-            source="./accent-id-commonaccent_ecapa/",
-            savedir="./accent-id-commonaccent_ecapa/"
+            source="Jzuluaga/accent-id-commonaccent_ecapa",
         )
         logger.info("Models loaded successfully")
         return whisper_model, classifier
