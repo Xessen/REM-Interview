@@ -1,7 +1,8 @@
 streamlit
 requests
 pydub
-torchaudio
+torch==2.7.0+cpu
+torchaudio==2.7.0+cpu
 git+https://github.com/openai/whisper.git
 textstat
 speechbrain
